@@ -1,66 +1,32 @@
-## Foundry
+# First lab 
+In this labs you will learn how to use forge to interact with smart contracts. 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## Conditions to satisfy
 
-Foundry consists of:
+- Follow the lab
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Run the lab
 
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+Run the tests with the following command:
 
 ```shell
-$ forge build
+$ forge test -vvvv
 ```
+## Solution
 
-### Test
+If you are stuck, you can check the solution using the following commands:
 
 ```shell
-$ forge test
+git checkout solution
+git pull
 ```
 
-### Format
+> make sure that your previous changes are stashed or committed before running the above commands. You can run `git stash` to stash your changes, or `git commit -am "my changes"` to commit your changes.
 
-```shell
-$ forge fmt
-```
+Check the files
 
-### Gas Snapshots
+- `./test/Subscription.t.sol` (forge tests)
 
-```shell
-$ forge snapshot
-```
+Rerun the command `forge test -vvvv` to check if the solution is correct.
 
-### Anvil
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
