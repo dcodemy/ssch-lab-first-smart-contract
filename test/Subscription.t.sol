@@ -49,6 +49,7 @@ contract SubscriptionTest is Test {
     function test_subscription_cant_be_bought_by_paying_less_than_the_requested_amount() public {
         
         vm.startPrank(bob);
+        vm.expectRevert();
         // check that the require(msg.value >= cost); is working and it 
         //reverts the transaction if the value is less than the cost.
         
