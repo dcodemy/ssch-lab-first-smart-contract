@@ -62,7 +62,7 @@ contract SubscriptionTest is Test {
 
         vm.startPrank(bob);
 
-        // add to the test here
+        // check that if bob requests the money back he only receives the amount he paid for the subscription.
 
         vm.expectRevert();
         s.getMoneyBack();
