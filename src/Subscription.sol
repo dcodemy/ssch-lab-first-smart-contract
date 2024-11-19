@@ -30,7 +30,11 @@ contract Subscription {
     }
 
     function getMoneyBack() public {
-        // this not secure yet. We will see in the coming issue what's wrong. No worries for now.
+        // this not secure yet. 
         payable(msg.sender).transfer(subscribers[msg.sender]);
+    }
+
+    function checkMyBalance() public view returns(uint256) {
+        return subscribers[msg.sender];
     }
 }
