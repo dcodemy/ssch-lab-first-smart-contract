@@ -59,5 +59,20 @@ contract SubscriptionTest is Test {
         vm.stopPrank();
         
     }
+
+    function test_users_can_only_receive_their_ether_back() public{
+
+        vm.startPrank(bob);
+
+        s.payForSubscription{value: 1 ether}();
+        assertEq(s.checkMyBalance(), 1 ether);
+        assertEq(bob.balance, 9 ether);
+        s.getMoneyBack();
+
+        vm.expectRevert();
+        s.getMoneyBack();
+        vm.stopPrank();
+        
+    }
     
 }

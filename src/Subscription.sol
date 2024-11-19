@@ -33,4 +33,8 @@ contract Subscription {
         // this not secure yet. We will see in the coming issue what's wrong. No worries for now.
         payable(msg.sender).transfer(subscribers[msg.sender]);
     }
+
+    function checkMyBalance() public view returns(uint256) {
+        return subscribers[msg.sender];
+    }
 }
