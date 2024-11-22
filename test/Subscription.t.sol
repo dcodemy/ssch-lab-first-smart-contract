@@ -29,8 +29,9 @@ contract SubscriptionTest is Test {
         vm.startPrank(bob);
         // Bob pays for the subscription 
         s.payForSubscription{value: 1 ether}();
-        // Tell to the test that we expect the next line to revert. In this case the transaction revers because of the auth modifier.
+        // Tell to the test that we expect the next line to revert. 
         vm.expectRevert();
+        //In this case the transaction reverts because of the auth modifier.
         s.getMoneyToTheOwner();
         // Stop impersonating bob
         vm.stopPrank();
