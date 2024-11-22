@@ -29,7 +29,10 @@ contract SubscriptionTest is Test {
         
         // Bob pays for the subscription 
         
-        // Tell to the test that we expect the next line to revert. In this case the transaction revers because of the auth modifier.
+    
+        // Verify that when Bob tries to steal all the funds calling getMoneyToTheOwner, it reverts
+        
+        
         
         // Stop impersonating bob
        
