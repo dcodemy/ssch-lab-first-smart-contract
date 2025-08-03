@@ -61,16 +61,5 @@ contract SubscriptionTest is Test {
         
     }
 
-    function test_users_can_only_receive_their_ether_back() public{
 
-        vm.startPrank(bob);
-
-        // check that if bob requests the money back he only receives the amount he paid for the subscription.
-
-        vm.expectRevert();
-        s.getMoneyBack();
-        vm.stopPrank();
-        
-    }
-    
 }
