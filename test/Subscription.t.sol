@@ -61,5 +61,15 @@ contract SubscriptionTest is Test {
         
     }
 
+    function test_users_can_only_receive_their_ether_back() public{
 
+        vm.startPrank(bob);
+
+        // add instructions here
+
+        vm.expectRevert();
+        s.getMoneyBack();
+        vm.stopPrank();
+        
+    }
 }
